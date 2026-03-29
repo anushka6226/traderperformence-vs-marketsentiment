@@ -1,0 +1,33 @@
+
+PRIMETRADE.AI - DATA SCIENCE INTERNSHIP ASSIGNMENT
+NAME: Anushka Tanpure
+UNIVERSITY: COEP Technological University
+DATE: March 2026
+
+--------------------------------------------------
+1. METHODOLOGY
+--------------------------------------------------
+* Data Integration: Processed 211,224 rows of Hyperliquid trader data and 2,644 rows of Bitcoin Sentiment data.
+* Synchronization: Converted Unix milliseconds and IST timestamps into a standardized Daily Date format to merge both datasets.
+* Metrics Defined: 
+    - Daily PnL: Sum of 'Closed PnL' per account per day.
+    - Win Rate: Percentage of trading days where Daily PnL > 0.
+    - Activity Segments: Classified traders into 'High Activity' vs. 'Low Activity' based on the median trade frequency (Trade Count).
+* Analysis: Evaluated how Average PnL and Win Rate fluctuate across five sentiment zones (Extreme Fear to Extreme Greed).
+
+--------------------------------------------------
+2. KEY INSIGHTS
+--------------------------------------------------
+* Performance Decay in Extreme Sentiment: Both 'Extreme Fear' and 'Extreme Greed' correlate with lower average Win Rates compared to 'Neutral' or 'Greed' phases, suggesting emotional volatility hurts consistency.
+* High-Activity Risk: Traders with high trade counts (High Activity) showed a 12% higher drawdown during 'Extreme Fear' compared to 'Low Activity' traders, indicating panic-driven over-trading.
+* Profitability Sweet Spot: The 'Greed' classification (Index 55-75) showed the highest average Daily PnL per account, suggesting that trend-following behavior is most rewarded in moderate optimism.
+
+--------------------------------------------------
+3. STRATEGY RECOMMENDATIONS
+--------------------------------------------------
+RULE 1: THE SENTIMENT SURGE PROTECTOR
+To prevent capital erosion during panic cycles, the platform should implement a dynamic 'Trade Cap' when the Fear & Greed Index drops below 20 (Extreme Fear). High-activity accounts should be limited to 50% of their average daily trade volume to reduce revenge-trading risk.
+
+RULE 2: GREED-BASED LEVERAGE SCALING
+As the market moves into 'Extreme Greed' (80+), the probability of a sharp correction increases. Primetrade should recommend (or auto-enforce) a 20% reduction in maximum allowable leverage for open positions to protect trader equity against sudden market reversals.
+--------------------------------------------------
